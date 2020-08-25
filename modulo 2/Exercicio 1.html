@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Exercício 01</title>
+</head>
+
+<body>
+ <div>
+    <button id="botao">Novo botao</button>
+ </div>
+
+ <div id="squares"></div>
+  
+
+   <script>
+    var btnElement = document.querySelector('#botao');
+    var squareElement = document.querySelector('#squares');
+    btnElement.onclick = function(){
+      var squares = document.createElement('div');
+
+      squares.style.width = '100px';
+      squares.style.height = '100px';
+      squares.style.backgroundColor = '#F00';
+
+      squareElement.appendChild(squares);
+    };
+   </script>
+    
+  </body>
+
+</html>

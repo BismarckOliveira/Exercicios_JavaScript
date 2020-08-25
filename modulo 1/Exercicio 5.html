@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Exercicio 5</title>
+    </head>
+    <body>
+        
+        <script>
+
+            
+            function listar(usuario){
+                for (usuario of usuario ){
+                console.log( "O " + usuario.nome + " possui as habilidades: " + usuario.habilidades.join(", "));
+                    
+                }
+            }
+
+            var usuario = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript","ReactJS","Redux"]
+            },
+
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS","Rube on Rails","Elixir"]
+            }
+
+            ]
+            
+            
+           listar(usuario);
+
+        </script>
+    </body>
+</html>

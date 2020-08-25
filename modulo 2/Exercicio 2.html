@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="pt-br">
+        <title>Exercico 2</title>
+    </head>
+
+    <body>
+     <div>
+         <button class="botao">Botao 2</button>
+     </div>
+
+     <div id="square"></div>
+
+     <script>
+         
+        var btnElement = document.querySelector('.botao');
+        var squareELement = document.querySelector('#square');
+
+        btnElement.onclick = function(){
+            var square = document.createElement('div');
+
+            square.style.width = '100px';
+            square.style.height = '100px';
+            square.style.backgroundColor = '#F00';
+
+            squareELement.appendChild(square);     
+
+            square.onmouseover = function random(){
+              square.style.backgroundColor = getRandomColor();
+              
+            }   
+
+        };
+
+             function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+              
+
+        </script>
+    </body>
+</html>
